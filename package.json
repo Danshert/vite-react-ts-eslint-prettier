@@ -4,8 +4,9 @@
 	"version": "0.0.0",
 	"scripts": {
 		"dev": "vite",
-		"build": "tsc && vite build",
+		"build": "tsc && vite build && workbox injectManifest",
 		"preview": "vite preview",
+		"pwa": "workbox injectManifest",
 		"lint": "npx eslint src",
 		"lint:fix": "npm run lint -- --fix",
 		"prettier": "npx prettier src --check",
