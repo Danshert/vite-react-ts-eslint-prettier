@@ -1,7 +1,12 @@
-import Hello from '~/components/Hello';
+import { BrowserRouter } from 'react-router-dom';
+import { AppRouter } from './router/AppRouter';
 
-function App() {
-	return <Hello />;
-}
+const App = () => {
+	return (
+		<BrowserRouter>
+			<AppRouter />
+		</BrowserRouter>
+	);
+};
 
 export default App;

@@ -1,6 +1,6 @@
-import logo from '~/logo.svg';
+import logo from '~/assets/icons/logo.svg';
 
-const Hello = () => {
+export const HomePage = () => {
 	return (
 		<div
 			style={{
@@ -45,5 +45,3 @@ const Hello = () => {
 		</div>
 	);
 };
-
-export default Hello;
