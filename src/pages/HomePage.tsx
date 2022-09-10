@@ -1,6 +1,10 @@
 import logo from '~/assets/icons/logo.svg';
 
+import { useUiStore } from '~/hooks';
+
 export const HomePage = () => {
+	const { darkMode, toggleDarkMode } = useUiStore();
+
 	return (
 		<div
 			style={{
@@ -10,6 +14,9 @@ export const HomePage = () => {
 				justifyContent: 'center',
 				textAlign: 'center',
 				paddingTop: '50px',
+				color: darkMode ? '#fff' : '#000',
+				backgroundColor: darkMode ? '#000' : '#fff',
+				minHeight: '100vh',
 			}}
 		>
 			<img src={logo} alt="Logo" style={{ height: '150px' }} />
@@ -41,6 +48,15 @@ export const HomePage = () => {
 				>
 					Github
 				</a>
+			</div>
+
+			<div style={{ marginTop: '20px' }}>
+				<p>Dark mode</p>
+
+				<label className="switch">
+					<input type="checkbox" onChange={toggleDarkMode} />
+					<span className="slider round" />
+				</label>
 			</div>
 		</div>
 	);
